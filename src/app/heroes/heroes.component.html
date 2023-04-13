@@ -1,0 +1,11 @@
+<div *ngFor="let hero of superheroes | slice:(currentPage-1)*itemsPerPage:currentPage*itemsPerPage">
+    <img src="{{ hero.image.url }}" alt="{{ hero.name }}">
+    <p>{{ hero.name }}</p>
+  </div>
+  
+  <div>
+    <button (click)="prevPage()">Previous</button>
+    <button (click)="nextPage()">Next</button>
+    <p>Page {{ currentPage }} of {{ totalPages() }}</p>
+  </div>
+  

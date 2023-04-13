@@ -1,0 +1,11 @@
+<div class="search-container">
+    <input type="text" [(ngModel)]="searchTerm" (keyup)="searchHeroes()" placeholder="Search hero...">
+    <div class="heroes-container">
+      <div *ngFor="let hero of filteredHeroes" class="hero-card">
+        <img src="{{ hero.image.url }}" alt="{{ hero.name }}">
+        <h3>{{ hero.name }}</h3>
+        <p>ID: {{ hero.id }}</p>
+      </div>
+    </div>
+  </div>
+  
