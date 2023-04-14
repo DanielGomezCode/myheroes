@@ -1,0 +1,183 @@
+$imgSuperman: url('../../assets/img/comicOne.png')
+$imgSpiderman: url('../../assets/img/comicTwo.png')
+    
+.home
+    width: 100%
+    display: flex
+    justify-content: space-between
+    padding-top: 90px
+
+
+.superman
+    width: 50%
+    background-image: $imgSuperman
+    padding: 40px
+
+.spiderman
+    width: 50%
+    background-image: $imgSpiderman
+    padding: 40px
+
+.first-info
+    position: relative
+
+.superman .first-info h2
+    font-family: 'Bangers'
+    font-weight: 400
+    font-size: 60px
+    color: #00A3FF
+    text-shadow: 4px 4px 4px black
+    -webkit-text-stroke: 1px black
+
+.spiderman .first-info h2
+    font-family: 'Bangers'
+    font-weight: 400
+    font-size: 60px
+    color: #ff0000
+    text-shadow: 4px 4px 4px black
+    -webkit-text-stroke: 1px black
+
+.superhero ul li
+    font-family: 'Allan'
+    font-weight: 700
+    font-size: 22px
+    text-shadow: 2px 2px 2px black
+    -webkit-text-stroke: 1px black
+    color: white
+
+.superman .superhero ul li strong
+    font-family: 'Allan'
+    font-weight: 700
+    font-size: 22px
+    text-shadow: 2px 2px 2px black
+    -webkit-text-stroke: 1px black
+    color: #00A9CE
+
+.spiderman .superhero ul li strong
+    font-family: 'Allan'
+    font-weight: 700
+    font-size: 22px
+    text-shadow: 2px 2px 2px black
+    -webkit-text-stroke: 1px black
+    color: red
+
+.imghero
+    position: absolute
+    top: 0px
+    right: 130px
+    width: 300px
+
+.phraseHero
+    position: absolute
+    top: 30px
+    right: -40px
+    width: 170px
+    font-family: 'Allan'
+    font-weight: 700
+    font-size: 20px
+    color: white
+    text-shadow: 2px 2px 2px black
+    -webkit-text-stroke: 1px rgb(36, 117, 158)
+
+.spiderman .phraseHero
+    top: 120px
+    right: -20px
+    color: white
+    text-shadow: 2px 2px 2px black
+    -webkit-text-stroke: 1px rgb(255, 2, 2)
+
+.two-info
+    padding-top: 100px
+    text-align: center
+
+.two-info h3
+    font-family: 'Bangers'
+    font-weight: 400
+    font-size: 45px
+    color: #FF0000
+    text-shadow: 2px 2px 2px black
+    -webkit-text-stroke: 2px black
+
+.superman .two-info h3
+    font-size: 55px
+    color:  rgb(0, 170, 255)
+    text-shadow: 2px 2px 2px black
+    -webkit-text-stroke: 2px black
+
+.two-info p
+    padding-top: 10px
+    font-family: 'Allan'
+    font-weight: 700
+    font-size: 24px
+    text-align: center
+    color: #ffffff
+    text-shadow: 4px 4px 4px black
+    -webkit-text-stroke: 1px black
+
+.two-info a
+    margin-top: 15px
+    display: inline-block
+    background-color: red
+    color: white
+    font-size: 30px
+    font-family: 'Bangers'
+    padding: 8px 30px
+    border-radius: 50px
+    border: 4px solid white
+
+.superman .two-info a
+    background-color: #00aaff
+    color: white
+
+
+@media screen and (max-width:1300px)
+    .imghero
+        display: none
+
+@media screen and (max-width:900px)
+    .home
+        flex-wrap: wrap
+
+    .imghero
+        display: block
+        right: 30%
+
+    .superman
+        width: 100%
+
+    .spiderman
+        width: 100%
+    
+    .phraseHero
+        right: 0
+
+    .spiderman .phraseHero
+        right: 0
+
+@media screen and (max-width: 700px)
+    .phraseHero
+        display: none
+
+    .imghero
+        right: 0
+
+@media screen and (max-width: 550px)
+    .imghero
+        width: 200px
+
+    .two-info
+        padding-top: 20px
+
+@media screen and (max-width: 450px)
+    
+    .superman, .spiderman
+        padding: 40px 20px
+    
+    .imghero
+        right: -30px
+
+    .two-info h3
+        font-size: 34px
+
+    .superman .two-info h3
+        font-size: 34px

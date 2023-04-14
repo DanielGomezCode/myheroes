@@ -1,0 +1,132 @@
+header
+    position: fixed
+    top: 0
+    width: 100%
+    display: flex
+    justify-content: space-between
+    padding: 20px 30px
+    align-items: center
+    background-color: #1d1d1d
+
+header nav ul
+    display: flex
+
+header nav ul li
+    margin-right: 30px
+
+header nav ul li a
+    color: white
+    transition: .5s ease
+
+.repositorie-link
+    display: none
+
+header nav ul li a::after
+    content: ''
+    display: block
+    height: 2px
+    width: 40%
+    background-color: white
+    transition: .5s ease
+
+header nav ul li a:hover
+    color: red
+    transition: .5s ease
+
+header nav ul li a:hover::after
+    content: ''
+    display: block
+    height: 2px
+    width: 100%
+    background-color: red
+    transition: .5s ease
+
+header img
+    width: 70px
+    margin-right: 50px
+    cursor: pointer
+
+.first-header
+    display: flex
+    align-items: center
+
+.menu
+    display: none
+    font-size: 20px
+    color: white
+    padding: 10px 12px
+    background-color: red
+    border-radius: 50px
+    transition: .5s ease
+
+.menu.active
+    background-color: white
+    color: red
+    transition: .5s ease
+
+
+.two-header a
+    display: inline-block
+    padding: 8px 30px
+    color: white
+    background-color: red
+    border-radius: 50px
+    transition: .5s ease
+
+.two-header a:hover
+    background-color: white
+    color: red
+    transition: .5s ease
+
+@media screen and (max-width: 600px)
+    header
+        padding: 0
+
+    header img
+        width: 100px
+        padding: 20px 0 20px 30px
+        margin: 0
+
+    .two-header
+        display: none
+
+    .repositorie-link
+        display: block
+
+    .first-header
+        width: 100%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        flex-wrap: wrap
+
+    .first-header nav
+        order: 1
+        width: 100%
+
+    .first-header nav ul
+        flex-direction: column
+        text-align: center
+
+    .first-header nav ul li
+        padding: 10px 0
+        margin: 0
+        transition: .5s ease
+        border-top: 1px solid white
+
+    .first-header nav ul li:hover
+        background-color: red
+        transition: .5s ease
+
+    .first-header nav ul li a::after
+        display: none
+
+    .menu
+        display: block
+        margin-right: 30px
+
+    .nav
+        display: none
+
+    .nav.active
+        display: block
