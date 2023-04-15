@@ -1,6 +1,6 @@
 <section class="gallery">
   <h2>From comics to the Real World!!</h2>
-  <p>Explore the gallery of legendary superheroes (We have more than 700
+  <p class="gallery-desc">Explore the gallery of legendary superheroes (We have more than 700
     SuperHeroes so if they still don't appear just wait a few seconds)</p>
   <div class="gallery-container">
     <div *ngFor="let hero of superheroes | slice:(currentPage-1)*itemsPerPage:currentPage*itemsPerPage" class="card-gallery">
@@ -15,8 +15,9 @@
         <p class="tiquet-hero"><strong>Power:</strong> {{ hero.powerstats.power }}</p>
         <p class="tiquet-hero"><strong>Combat:</strong> {{ hero.powerstats.combat }}</p>        
       </div>
-      <a href="" class="see-appareance">See Apareance</a>
-      <div class="gallery-appearance">
+      <a href="#" class="see-appearance" (click)="toggleAppearance($event, hero)">See Appearance</a>
+
+      <div class="gallery-appearance" [ngClass]="{'active': hero.showAppearance}">
         <h3>APPEARANCE</h3>
         <p class="tiquet-hero"><strong>Gender:</strong> {{ hero.appearance.gender }}</p>
         <p class="tiquet-hero"><strong>Race:</strong> {{ hero.appearance.race }}</p>
@@ -25,12 +26,12 @@
         <p class="tiquet-hero"><strong>Eye Color:</strong> {{ hero.appearance["eye-color"]}}</p>
         <p class="tiquet-hero"><strong>Hair Color:</strong> {{ hero.appearance["hair-color"]}}</p>        
       </div> 
-    </div>
-    <div>
-      <button (click)="prevPage()"> <i class="fa-solid fa-arrow-left"></i> Previous Page</button>
-      <button (click)="nextPage()">Next Page <i class="fa-solid fa-arrow-right"></i></button>
-      <p>Page {{ currentPage }} of {{ totalPages() }}</p>
-    </div>     
+    </div>  
   </div>
+  <div class="quality-gallery">
+    <button class="prev-page" (click)="prevPage()"> <i class="fa-solid fa-arrow-left"></i> Previous Page</button>
+    <button class="next-page" (click)="nextPage()">Next Page <i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+  <p>Page {{ currentPage }} of {{ totalPages() }}</p>   
 </section>
   

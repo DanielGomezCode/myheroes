@@ -5,7 +5,7 @@
       will do the following (Did you know that the first superhero was
       created in 1938.)</p>
     <div class="searching">
-      <input type="text" [(ngModel)]="searchTerm" (keyup)="searchHeroes()" placeholder="Superman">
+      <input type="text" [(ngModel)]="searchTerm" (keyup)="searchHeroes()" placeholder="Batman">
       <i class="fa-solid fa-magnifying-glass"></i>
     </div>
     <div *ngFor="let hero of filteredHeroes" class="hero-card">

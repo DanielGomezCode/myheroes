@@ -12,21 +12,37 @@ export class HeroesComponent implements OnInit {
   superheroNames: string[] = [];
   currentPage: number = 1;
   itemsPerPage: number = 8;
+  containerappearanceActive: boolean = false;
+
+  toggleContainerAppearance() {
+    this.containerappearanceActive = !this.containerappearanceActive;
+  }
 
   constructor(private apiService: ApiService) { }
 
   ngOnInit() {
     this.loadData();
   }
+  toggleAppearance(event: any, hero: any) {
+    event.preventDefault();
+    hero.showAppearance = !hero.showAppearance;
+  }
+  
+
 
   loadData() {
     const observables: Observable<any>[] = [];
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= 700; i++) {
       observables.push(this.apiService.getSuperheroById(i));
     }
-
+  
     forkJoin(observables).subscribe(response => {
-      this.superheroes = response;
+      this.superheroes = response.map(hero => {
+        return {
+          ...hero,
+          containerappearanceActive: false // Agregar esta propiedad
+        }
+      });
       this.updatePage(1);
     });
   }

@@ -25,13 +25,16 @@
     margin-top: 40px
     display: grid
     justify-content: center
+    align-items: flex-start
     grid-template-columns: auto auto auto auto
 
 .card-gallery
     background-color: white
     margin: 15px
     width: 250px
+    padding: 10px 0
     border: 8px solid white
+    border-radius: 25px
 
 .card-gallery img
     width: 234px
@@ -69,3 +72,100 @@
     font-family: 'Allan'
     color: red
     font-weight: 700
+
+.gallery-appearance
+    border-radius: 25px
+    background-color: #1d1d1d
+    display: none
+
+.gallery-appearance.active
+    display: block
+
+
+.gallery-appearance h3
+    padding-top: 10px
+    font-size: 22px
+    color: white
+    text-align: center
+
+.gallery-appearance p
+    font-size: 20px
+    line-height: 5px
+    font-weight: 700
+
+.gallery-appearance p:last-child
+    padding-bottom: 22px
+
+.gallery-appearance p strong
+    font-family: 'Allan'
+    color: red
+    font-weight: 700
+
+.see-appearance
+    display: flex
+    justify-content: center
+    text-align: center
+    margin: 15px auto
+    padding: 8px 30px
+    background-color: red
+    color: white
+    font-family: 'Bangers'
+    border-radius: 50px
+
+
+.quality-gallery
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 auto
+    margin-top: 100px
+
+.prev-page
+    padding: 10px 40px
+    background: black
+    color: red
+    border: 4px solid white
+    font-family: 'Allan'
+    font-size: 24px
+    cursor: pointer
+    margin-right: 40px
+
+.next-page
+    padding: 10px 50px
+    background: red
+    color: white
+    border: 4px solid white
+    font-family: 'Allan'
+    font-size: 24px
+    cursor: pointer
+
+
+@media screen and (max-width: 1300px)
+
+    .gallery-container
+        grid-template-columns: auto auto auto
+
+@media screen and (max-width: 850px)
+    
+    .gallery-container
+        grid-template-columns: auto auto
+
+@media screen and (max-width: 630px)
+    
+    .gallery-container
+        grid-template-columns: auto
+    
+    .gallery h2
+        font-size: 45px
+        text-shadow: 2px 2px black
+
+    .gallery .gallery-desc
+        font-size: 24px
+        text-shadow: 2px 2px black
+
+    .quality-gallery
+        flex-direction: column
+
+    .prev-page
+        margin: 0 0 10px 0

@@ -18,7 +18,7 @@ export class SearchComponent implements OnInit{
   }
 
   loadHeroes() {
-    this.searchService.searchHeroesByName('superman').subscribe(response => {
+    this.searchService.searchHeroesByName('batman').subscribe(response => {
       this.heroes = [response[1]]; 
       this.filteredHeroes = this.heroes;
     });
