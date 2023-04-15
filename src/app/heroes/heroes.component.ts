@@ -11,7 +11,7 @@ export class HeroesComponent implements OnInit {
   superheroes: any[] = [];
   superheroNames: string[] = [];
   currentPage: number = 1;
-  itemsPerPage: number = 20;
+  itemsPerPage: number = 8;
 
   constructor(private apiService: ApiService) { }
 
@@ -21,7 +21,7 @@ export class HeroesComponent implements OnInit {
 
   loadData() {
     const observables: Observable<any>[] = [];
-    for (let i = 1; i <= 700; i++) {
+    for (let i = 1; i <= 20; i++) {
       observables.push(this.apiService.getSuperheroById(i));
     }
 

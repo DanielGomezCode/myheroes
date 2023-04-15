@@ -1,11 +1,36 @@
-<div class="search-container">
-    <input type="text" [(ngModel)]="searchTerm" (keyup)="searchHeroes()" placeholder="Search hero...">
-    <div class="heroes-container">
-      <div *ngFor="let hero of filteredHeroes" class="hero-card">
-        <img src="{{ hero.image.url }}" alt="{{ hero.name }}">
-        <h3>{{ hero.name }}</h3>
-        <p>ID: {{ hero.id }}</p>
+<div class="search">
+  <div class="search-one">
+    <h2>USE THE BATCOMPUTER TO FIND YOUR SUPER HERO</h2>
+    <p>Put the name of your superhero and the batcomputer
+      will do the following (Did you know that the first superhero was
+      created in 1938.)</p>
+    <div class="searching">
+      <input type="text" [(ngModel)]="searchTerm" (keyup)="searchHeroes()" placeholder="Superman">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+    <div *ngFor="let hero of filteredHeroes" class="hero-card">
+      <img src="{{ hero.image.url }}" alt="{{ hero.name }}" class="imgsearch">
+      <div class="hero-stadistics">
+        <p class="date-hero"><strong>Intelligence:</strong> {{ hero.powerstats.intelligence }}</p>
+        <p class="date-hero"><strong>Strength:</strong> {{ hero.powerstats.strength }}</p>
+        <p class="date-hero"><strong>Speed:</strong> {{ hero.powerstats.speed }}</p>
+        <p class="date-hero"><strong>Durability:</strong> {{ hero.powerstats.durability }}</p>
+        <p class="date-hero"><strong>Power:</strong> {{ hero.powerstats.power }}</p>
+        <p class="date-hero"><strong>Combat:</strong> {{ hero.powerstats.combat }}</p>        
+      </div>
+      <div class="hero-appearance">
+        <p class="date-hero"><strong>Gender:</strong> {{ hero.appearance.gender }}</p>
+        <p class="date-hero"><strong>Race:</strong> {{ hero.appearance.race }}</p>
+        <p class="date-hero"><strong>Height:</strong> {{ hero.appearance.height }}</p>
+        <p class="date-hero"><strong>Weight:</strong> {{ hero.appearance.weight }}</p>
+        <p class="date-hero"><strong>Eye Color:</strong> {{ hero.appearance["eye-color"]}}</p>
+        <p class="date-hero"><strong>Hair Color:</strong> {{ hero.appearance["hair-color"]}}</p>        
       </div>
     </div>
+
   </div>
+  <div class="search-two">
+    <img src="../../assets/img/batman.png" alt="">
+  </div>
+</div>
   

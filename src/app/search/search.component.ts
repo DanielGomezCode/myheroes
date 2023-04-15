@@ -19,7 +19,7 @@ export class SearchComponent implements OnInit{
 
   loadHeroes() {
     this.searchService.searchHeroesByName('superman').subscribe(response => {
-      this.heroes = [response[1]]; // toma solo el segundo elemento
+      this.heroes = [response[1]]; 
       this.filteredHeroes = this.heroes;
     });
   }

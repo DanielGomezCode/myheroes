@@ -1,11 +1,36 @@
-<div *ngFor="let hero of superheroes | slice:(currentPage-1)*itemsPerPage:currentPage*itemsPerPage">
-    <img src="{{ hero.image.url }}" alt="{{ hero.name }}">
-    <p>{{ hero.name }}</p>
+<section class="gallery">
+  <h2>From comics to the Real World!!</h2>
+  <p>Explore the gallery of legendary superheroes (We have more than 700
+    SuperHeroes so if they still don't appear just wait a few seconds)</p>
+  <div class="gallery-container">
+    <div *ngFor="let hero of superheroes | slice:(currentPage-1)*itemsPerPage:currentPage*itemsPerPage" class="card-gallery">
+      <img src="{{ hero.image.url }}" alt="{{ hero.name }}">
+      <p class="gallery-name">{{ hero.name }}</p>
+      <div class="gallery-stadistics">
+        <h3>POWERSTATS</h3>
+        <p class="tiquet-hero"><strong>Intelligence:</strong> {{ hero.powerstats.intelligence }}</p>
+        <p class="tiquet-hero"><strong>Strength:</strong> {{ hero.powerstats.strength }}</p>
+        <p class="tiquet-hero"><strong>Speed:</strong> {{ hero.powerstats.speed }}</p>
+        <p class="tiquet-hero"><strong>Durability:</strong> {{ hero.powerstats.durability }}</p>
+        <p class="tiquet-hero"><strong>Power:</strong> {{ hero.powerstats.power }}</p>
+        <p class="tiquet-hero"><strong>Combat:</strong> {{ hero.powerstats.combat }}</p>        
+      </div>
+      <a href="" class="see-appareance">See Apareance</a>
+      <div class="gallery-appearance">
+        <h3>APPEARANCE</h3>
+        <p class="tiquet-hero"><strong>Gender:</strong> {{ hero.appearance.gender }}</p>
+        <p class="tiquet-hero"><strong>Race:</strong> {{ hero.appearance.race }}</p>
+        <p class="tiquet-hero"><strong>Height:</strong> {{ hero.appearance.height }}</p>
+        <p class="tiquet-hero"><strong>Weight:</strong> {{ hero.appearance.weight }}</p>
+        <p class="tiquet-hero"><strong>Eye Color:</strong> {{ hero.appearance["eye-color"]}}</p>
+        <p class="tiquet-hero"><strong>Hair Color:</strong> {{ hero.appearance["hair-color"]}}</p>        
+      </div> 
+    </div>
+    <div>
+      <button (click)="prevPage()"> <i class="fa-solid fa-arrow-left"></i> Previous Page</button>
+      <button (click)="nextPage()">Next Page <i class="fa-solid fa-arrow-right"></i></button>
+      <p>Page {{ currentPage }} of {{ totalPages() }}</p>
+    </div>     
   </div>
-  
-  <div>
-    <button (click)="prevPage()">Previous</button>
-    <button (click)="nextPage()">Next</button>
-    <p>Page {{ currentPage }} of {{ totalPages() }}</p>
-  </div>
+</section>
   

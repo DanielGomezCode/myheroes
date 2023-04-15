@@ -1,0 +1,179 @@
+.search
+    padding: 140px 0 0 40px
+    background: #101010
+    color: white
+    display: flex
+
+.search-two
+    /*margin-top: auto*/
+
+.search-two img
+    width: 550px
+
+.imgsearch
+    width: 200px
+    border-radius: 25px
+    margin-right: 40px
+
+.search-one
+    height: 100vh
+    overflow-y: auto
+
+.search-one h2
+    font-family: 'Bangers'
+    font-size: 75px
+    font-weight: 400
+    line-height: 65px
+
+.search-one p
+    margin-top: 20px
+    font-family: 'Allan'
+    font-style: normal
+    font-weight: 400
+    font-size: 25px
+    line-height: 35px
+
+.searching
+    width: 390px
+    margin-top: 40px
+    border-radius: 50px
+    border: 1px solid white
+    display: flex
+    align-items: center
+
+.searching input
+    width: 350px
+    background-color: transparent
+    color: white
+    border: none
+    font-size: 16px
+    padding: 15px 10px 15px 20px
+    outline: none
+
+.hero-card
+    margin-top: 40px
+    display: flex
+
+.hero-card .date-hero
+    line-height: 20px
+    font-family: 'Allan'
+    font-style: normal
+    font-weight: 700
+    font-size: 20px
+
+.hero-card .date-hero strong
+    font-family: 'Allan'
+    font-style: normal
+    font-weight: 700
+    font-size: 20px
+    color: red
+
+.hero-stadistics
+    margin-right: 40px
+
+@media screen and (max-width: 1300px)
+    .search-two img
+        width: 400px
+    
+    .search-one h2
+        font-size: 60px
+    
+    .search-one p
+        font-size: 22px
+        line-height: 24px
+    
+    .hero-card .date-hero
+        font-size: 18px
+        line-height: 10px
+
+    .imgsearch
+        width: 150px
+
+@media screen and (max-width: 900px)
+    .search-two
+        display: none
+    
+    .search-one
+        padding: 40px
+        text-align: center
+
+    .hero-card
+        justify-content: center
+
+    .searching
+        width: 80%
+        margin: 40px 80px 0
+        padding-right: 20px
+        justify-content: space-between
+
+@media screen and (max-width: 750px)
+    .search-one
+        padding: 0
+        overflow-x: hidden
+
+    .search
+        padding: 140px 40px 40px
+        
+@media screen and (max-width: 550px)
+    .search-one h2
+        font-size: 40px
+        line-height: 45px
+
+    .searching
+        margin: 40px
+
+    .searching input
+        font-size: 12px
+
+    .date-hero
+        font-size: 14px
+        text-align: left
+
+    .imgsearch
+        margin-right: 20px
+    
+    .hero-stadistics
+        margin-right: 20px
+
+@media screen and (max-width: 500px)
+    .hero-card
+        flex-wrap: wrap
+    
+    .imgsearch
+        width: 100%
+        max-width: 200px
+        margin: 0 0 20px 0
+
+    .hero-stadistics
+        margin-right: 5px
+    
+    .hero-stadistics, .hero-appearance
+        width: 40%
+
+    .hero-card .date-hero
+        font-size: 16px
+        line-height: 5px
+
+    .hero-card .date-hero strong
+        font-size: 14px
+        line-height: 5px
+
+    .search-one
+        height: auto
+        overflow-y: hidden
+        scrollbar-width: none
+        -ms-overflow-style: none
+
+    .search-one h2
+        font-size: 30px
+        line-height: 30px
+
+    .search-one p
+        font-size: 16px
+        
+    .searching
+        width: 100%
+        margin: 40px 0
+
+    .searching input
+        font-size: 16px
